@@ -22,3 +22,6 @@ deploy:
   local_dir: pages-dir
   on:
     branch: dev
+
+notifications:
+  email: false
