@@ -1,0 +1,22 @@
+---
+language: node_js
+
+script:
+- |
+  sudo apt update
+  sudo apt -y install gcc make automake autoconf git
+  git clone -b master https://github.com/Dreamacro/clash-dashboard
+  cd clash-dashboard
+  npm install
+  npm build
+  cd -
+  mkdir -p gh-pages
+  mv dist gh-pages/clash
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: gh-pages
+  on:
+    branch: dev
