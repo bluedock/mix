@@ -19,6 +19,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: gh-pages
+  local_dir: pages-dir
   on:
     branch: dev
