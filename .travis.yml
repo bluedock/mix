@@ -11,7 +11,7 @@ script:
   git clone -b master https://github.com/Dreamacro/clash-dashboard
   cd clash-dashboard
   npm install
-  npm build
+  npm run build
   cd -
   mkdir -p gh-pages
   mv dist gh-pages/clash
