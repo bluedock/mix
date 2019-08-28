@@ -14,6 +14,7 @@ script:
   npm run build
   mkdir -p ../pages-dir
   mv dist ../pages-dir/clash
+  echo 'm.mixhub.cn' > ../pages-dir/CNAME
 
 deploy:
   provider: pages
