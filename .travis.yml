@@ -12,9 +12,8 @@ script:
   cd clash-dashboard
   npm install
   npm run build
-  cd -
-  mkdir -p gh-pages
-  mv dist gh-pages/clash
+  mkdir -p ../pages-dir
+  mv dist ../pages-dir/clash
 
 deploy:
   provider: pages
