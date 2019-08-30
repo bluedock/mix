@@ -13,9 +13,10 @@ script:
   npm install
   npm run build
   sed -i 's#"//"#"http://"#g' dist/js/bundle.*.js # workaround to for https site fetch http XHR on 127.0.0.1
-  mkdir -p ../pages-dir
-  mv dist ../pages-dir/clash
-  echo 'm.mixhub.cn' > ../pages-dir/CNAME
+  cd -
+  mkdir -p pages-dir
+  mv clash-dashboard/dist pages-dir/clash
+  echo 'm.mixhub.cn' > pages-dir/CNAME
 
 - |
   nvm install 6.14
@@ -24,8 +25,9 @@ script:
   cd AriaNg
   npm install
   gulp clean build
-  mkdir -p ../pages-dir
-  mv dist ../pages-dir/ariang
+  cd -
+  mkdir -p pages-dir
+  mv AriaNg/dist pages-dir/ariang
 
 deploy:
   provider: pages
