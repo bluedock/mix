@@ -17,6 +17,16 @@ script:
   mv dist ../pages-dir/clash
   echo 'm.mixhub.cn' > ../pages-dir/CNAME
 
+- |
+  nvm install 6.14
+  nvm use 6.14
+  git clone https://github.com/mayswind/AriaNg
+  cd AriaNg
+  npm install
+  gulp clean build
+  mkdir -p ../pages-dir
+  mv dist ../pages-dir/ariang
+
 deploy:
   provider: pages
   skip_cleanup: true
