@@ -12,7 +12,7 @@ script:
   cd clash-dashboard
   npm install
   npm run build
-  sed -i 's#"//"#"http://"#' dist/js/bundle.*.js # workaround to for https site fetch http XHR on 127.0.0.1
+  sed -i 's#"//"#"http://"#g' dist/js/bundle.*.js # workaround to for https site fetch http XHR on 127.0.0.1
   mkdir -p ../pages-dir
   mv dist ../pages-dir/clash
   echo 'm.mixhub.cn' > ../pages-dir/CNAME
