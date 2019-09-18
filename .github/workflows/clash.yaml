@@ -9,7 +9,7 @@ jobs:
     - name: setup node env
       uses: actions/setup-node@master
       with:
-        node-version: stable
+        node-version: 12
     - name: clone code
       run: git clone -b master https://github.com/Dreamacro/clash-dashboard
     - name: npm install
