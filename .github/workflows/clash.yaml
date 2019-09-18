@@ -1,0 +1,16 @@
+name: clash-dashboard
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: setup node env
+      uses: actions/setup-node@master
+      with:
+        node-version: stable
+    - name: clone code
+      run: git clone -b master https://github.com/Dreamacro/clash-dashboard
+    - name: npm install
+      run: cd clash-dashboard && npm install
