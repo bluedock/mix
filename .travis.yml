@@ -16,7 +16,7 @@ script:
   cd -
   mkdir -p pages-dir
   mv clash-dashboard/dist pages-dir/clash
-  echo 'm.mixhub.cn' > pages-dir/CNAME
+  echo 'm.mixhub.cf' > pages-dir/CNAME
 
 - |
   nvm install 6.14
