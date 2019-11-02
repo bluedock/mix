@@ -29,6 +29,10 @@ script:
   mkdir -p pages-dir
   mv AriaNg/dist pages-dir/ariang
 
+- |
+  git clone https://github.com/lynsun/zwdzjs
+  mv zwdzjs pages-dir/game
+
 deploy:
   provider: pages
   skip_cleanup: true
