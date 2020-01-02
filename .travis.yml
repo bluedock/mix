@@ -12,7 +12,7 @@ script:
   cd clash-dashboard
   npm install
   npm run build
-  sed -i 's#"//"#"http://"#g' dist/js/bundle.*.js # workaround to for https site fetch http XHR on 127.0.0.1
+  sed -i -e 's/wss/ws/g' -e 's#"//"#"http://"#g' dist/js/bundle.*.js # workaround to for https site fetch http XHR on 127.0.0.1
   cd -
   mkdir -p pages-dir
   mv clash-dashboard/dist pages-dir/clash
