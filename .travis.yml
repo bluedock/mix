@@ -28,6 +28,7 @@ script:
   cd -
   mkdir -p pages-dir
   mv AriaNg/dist pages-dir/ariang
+  echo 'm.mixhub.cn' > pages-dir/CNAME
 
 - git clone https://github.com/lynsun/zwdzjs pages-dir/game
 - git clone -b gh-pages https://github.com/evgeny-nadymov/telegram-react pages-dir/telegram
